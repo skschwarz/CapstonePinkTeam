@@ -21,6 +21,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
+    //test
     @Bean
     public HibernateJpaSessionFactoryBean sessionFactory() {
         return new HibernateJpaSessionFactoryBean();
