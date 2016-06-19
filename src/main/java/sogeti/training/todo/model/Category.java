@@ -1,14 +1,15 @@
 package sogeti.training.todo.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
-@Table(name="USER")
-public class User {
+@Table(name="CATEGORY")
+public class Category {
 	
 	private int id;
-	
-	private String type;   	//required field
+	private String category;
+
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -19,12 +20,11 @@ public class User {
 		this.id = id;
 	}
 	
-	@Column(name="TYPE")
-	public String getType() {
-		return type;
+	@Column(name="CATEGORY")
+	public String getCategory() {
+		return category;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setCategory(String category) {
+		this.category = category;
 	}
-
 }
